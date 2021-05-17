@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+$main-color: hsl(300, 43%, 22%);
+$small-text-color: hsl(333, 80%, 67%);
+$ratings-background-color: hsl(300, 24%, 96%);
+$border: none;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-image: url("Images/bg-pattern-bottom-desktop.svg"), url("Images/bg-pattern-top-desktop.svg");
+    background-position: bottom -160px right 0px,
+                         top -50px left 0px ;
+    background-repeat: no-repeat;
+    font-family: 'Spartan', sans-serif;
+    font-size: 16px;
+}
+
+.project-container {
+    width: 100%;
+    height: 100%;
+
+    .topbox {
+        border: $border;
+        width: 75%;
+        height: 50%;
+        margin: auto;
+        display: flex;
+
+        .comments {
+            border: $border;
+            width: 40%;
+            padding-top: 50px;
+
+            .textcontainer {
+             border: $border;
+
+               .bigtext {
+                  font-size: 2.9em;
+                  font-weight: 900;
+                  color: $main-color;
+                  margin-bottom: 20px;
+               }
+
+               .smalltext {
+                   border: $border;
+                   color: $small-text-color;
+                   font-size: 0.8em;
+                   font-weight: 500;
+               }
+            }
+        }
+
+        .ratings {
+            border: $border;
+            padding-top: 60px;
+            width: 60%;
+            //text-align: right;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+            .ratingsone, .ratingstwo, .ratingsthree {
+                border: $border;
+                width: 75%;
+                border-radius: 5px;
+                background-color: $ratings-background-color;
+                height: 50px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin-bottom: 2%;
+
+                span {
+                    margin-left: 6%;
+                    font-weight: 900;
+                    color: $main-color;
+                    font-size: 0.8em;
+                }
+
+                #firststar {
+                    padding-left: 5%;
+                }
+
+                img {
+                    margin-right: 1.5%;
+                }
+            }
+
+            #secondrating {
+                margin-right: 5%;
+            }
+
+            #firstrating {
+                margin-right: 10%;
+            }
+        }
+    }
+
+    .bottombox {
+        border: $border;
+        height: 50%;
+        width: 75%;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 40px;
+
+        .person {
+            border: $border;
+            background-color: $main-color;
+            height: 220px;
+            width: 320px;
+            padding-top: 34px;
+            padding-left: 3%;
+            padding-right: 3%;
+            margin-right: 2%;
+
+            blockquote {
+                color: white;
+                margin-top: 15px;
+                font-size: 0.9em;
+            }
+
+            .customerinfo {
+                display: flex;
+
+                .name {
+                    color: white;
+                    font-size: 0.7em;
+                    font-weight: 900;
+                    margin-left: 20%;
+                    width: 100%;
+                    margin-top: 10px;
+                    margin-bottom: 2px;
+                }
+
+                .status {
+                    color: $small-text-color;
+                    margin-left: 20%;
+                    font-size: 0.7em;
+                    width: 100%;
+                    font-weight: 400;
+                }
+
+                .imagecontainer {
+                    border-radius: 50px;
+
+                    img {
+                        border-radius: 50px;
+                        width: 50px;
+                        height: 50px;
+                    }
+                }
+            }
+        }
+
+        .Anne {
+            margin-top: 45px;
+        }
+
+        .irene {
+            margin-top: 22.5px;
+        }
+
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 800px) {
+    .topbox {
+        width: 100% !important;
+        flex-direction: column;
+    }
+
+    .comments {
+        width: 100% !important;
+        text-align: center;
+    }
+
+    .ratings {
+        width: 100% !important;
+        height: 100%;
+        text-align: center !important;
+    }
+
+    .ratingsone, .ratingstwo, .ratingsthree {
+        width: 100% !important;
+        margin-right: 0 !important;
+    }
+
+    span {
+        display: block !important;
+    }
+
+    .bottombox {
+        flex-direction: column !important;
+    }
+
+    .ratings {
+        margin-top: 50px;
+    }
+}
