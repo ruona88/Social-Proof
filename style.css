@@ -117,7 +117,7 @@ main .Anne {
 .person blockquote {
   color: white;
   margin-top: 15px;
-  font-size: 0.7em;
+  font-size: 0.55em;
 }
 
 .person .customerinfo {
@@ -215,7 +215,7 @@ main .Anne {
 
 @media only screen and (min-width: 1150px) {
   html, body {
-    font-size: 19px;
+    font-size: 22px;
   }
 }
 /*# sourceMappingURL=style.css.map */
