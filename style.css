@@ -15,120 +15,116 @@ html, body {
   font-size: 16px;
 }
 
-.project-container {
+main {
+  border: none;
   width: 100%;
   height: 100%;
+  display: grid;
+  grid-template-rows: repeat(20, 1fr);
+  grid-template-columns: repeat(15, 1fr);
+  grid-row-gap: 3%;
 }
 
-.project-container .topbox {
+main .bigtext {
+  grid-row: 3 / span 5;
+  grid-column: 3 / span 4;
   border: none;
-  width: 75%;
-  height: 50%;
-  margin: auto;
-  display: flex;
-}
-
-.project-container .topbox .comments {
-  border: none;
-  width: 40%;
-  padding-top: 50px;
-}
-
-.project-container .topbox .comments .textcontainer {
-  border: none;
-}
-
-.project-container .topbox .comments .textcontainer .bigtext {
-  font-size: 2.9em;
-  font-weight: 900;
   color: #502050;
-  margin-bottom: 20px;
+  font-size: 2.5em;
+  font-weight: 900;
 }
 
-.project-container .topbox .comments .textcontainer .smalltext {
+main .smalltext {
   border: none;
+  grid-row: 8 / span 2;
+  grid-column: 3 / span 4;
   color: #ee68a4;
-  font-size: 0.8em;
+  font-size: 0.75em;
   font-weight: 500;
 }
 
-.project-container .topbox .ratings {
+main .ratingsone {
   border: none;
-  padding-top: 60px;
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  grid-row: 3 / span 2;
+  grid-column: 8 / span 4;
+  width: 100%;
 }
 
-.project-container .topbox .ratings .ratingsone, .project-container .topbox .ratings .ratingstwo, .project-container .topbox .ratings .ratingsthree {
+main .ratingstwo {
   border: none;
-  width: 75%;
-  border-radius: 5px;
+  grid-row: 5 / span 2;
+  grid-column: 9 / span 4;
+}
+
+main .ratingsthree {
+  border: none;
+  grid-row: 7 / span 2;
+  grid-column: 10 / span 4;
+}
+
+main .colton {
+  border: none;
+  grid-row: 11 / span 6;
+  grid-column: 3 / span 3;
+}
+
+main .irene {
+  border: none;
+  grid-row: 12 / span 6;
+  grid-column: 7 / span 3;
+}
+
+main .Anne {
+  border: none;
+  grid-row: 13 / span 6;
+  grid-column: 11 / span 3;
+}
+
+#firstrating, #secondrating, #thirdrating {
   background-color: #f7f2f7;
-  height: 50px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-bottom: 2%;
-}
-
-.project-container .topbox .ratings .ratingsone span, .project-container .topbox .ratings .ratingstwo span, .project-container .topbox .ratings .ratingsthree span {
-  margin-left: 6%;
-  font-weight: 900;
+  border-radius: 10px;
   color: #502050;
-  font-size: 0.8em;
-}
-
-.project-container .topbox .ratings .ratingsone #firststar, .project-container .topbox .ratings .ratingstwo #firststar, .project-container .topbox .ratings .ratingsthree #firststar {
-  padding-left: 5%;
-}
-
-.project-container .topbox .ratings .ratingsone img, .project-container .topbox .ratings .ratingstwo img, .project-container .topbox .ratings .ratingsthree img {
-  margin-right: 1.5%;
-}
-
-.project-container .topbox .ratings #secondrating {
-  margin-right: 5%;
-}
-
-.project-container .topbox .ratings #firstrating {
-  margin-right: 10%;
-}
-
-.project-container .bottombox {
-  border: none;
-  height: 50%;
-  width: 75%;
-  margin: auto;
+  font-weight: 900;
+  font-size: 0.75em;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-top: 40px;
+  align-items: center;
+  min-width: 320px;
 }
 
-.project-container .bottombox .person {
-  border: none;
-  background-color: #502050;
-  height: 220px;
-  width: 320px;
-  padding-top: 34px;
-  padding-left: 3%;
-  padding-right: 3%;
+#firstrating .starimage, #secondrating .starimage, #thirdrating .starimage {
+  width: 15px;
+  height: 15px;
   margin-right: 2%;
 }
 
-.project-container .bottombox .person blockquote {
-  color: white;
-  margin-top: 15px;
-  font-size: 0.9em;
+#firstrating #firststar, #secondrating #firststar, #thirdrating #firststar {
+  padding-left: 6%;
 }
 
-.project-container .bottombox .person .customerinfo {
+#firstrating span, #secondrating span, #thirdrating span {
+  margin-left: 6%;
+}
+
+.person {
+  background-color: #502050;
+  border-radius: 5px;
+  padding-top: 34px;
+  padding-left: 7%;
+  padding-right: 7%;
+  width: 120%;
+}
+
+.person blockquote {
+  color: white;
+  margin-top: 15px;
+  font-size: 0.7em;
+}
+
+.person .customerinfo {
   display: flex;
 }
 
-.project-container .bottombox .person .customerinfo .name {
+.person .customerinfo .name {
   color: white;
   font-size: 0.7em;
   font-weight: 900;
@@ -138,7 +134,7 @@ html, body {
   margin-bottom: 2px;
 }
 
-.project-container .bottombox .person .customerinfo .status {
+.person .customerinfo .status {
   color: #ee68a4;
   margin-left: 20%;
   font-size: 0.7em;
@@ -146,50 +142,80 @@ html, body {
   font-weight: 400;
 }
 
-.project-container .bottombox .person .customerinfo .imagecontainer {
+.person .customerinfo .imagecontainer {
   border-radius: 50px;
 }
 
-.project-container .bottombox .person .customerinfo .imagecontainer img {
+.person .customerinfo .imagecontainer img {
   border-radius: 50px;
   width: 50px;
   height: 50px;
 }
 
-.project-container .bottombox .Anne {
-  margin-top: 45px;
-}
-
-.project-container .bottombox .irene {
-  margin-top: 22.5px;
-}
-
-@media screen and (max-width: 800px) {
-  .topbox {
-    width: 100% !important;
-    flex-direction: column;
+@media only screen and (max-width: 1000px) {
+  html, body {
+    font-size: 21px;
   }
-  .comments {
-    width: 100% !important;
+  main {
+    padding-top: 50px;
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1.5fr 1fr 1fr 1fr 2.2fr 2.2fr 2.2fr;
+    grid-template-areas: "bigtext" "smalltext" "firstrating" "secondrating" "thirdrating" "colton" "irene" "anne";
+  }
+  main .bigtext {
+    grid-area: bigtext;
+    text-align: center;
+    font-size: 2.0em;
+  }
+  main .smalltext {
+    grid-area: smalltext;
     text-align: center;
   }
-  .ratings {
-    width: 100% !important;
+  main .ratingsone {
+    grid-area: firstrating;
+    border-radius: 0px !important;
+    height: 60px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  main .ratingstwo {
+    grid-area: secondrating;
+    border-radius: 0px !important;
+    height: 60px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  main .ratingsthree {
+    grid-area: thirdrating;
+    border-radius: 0px !important;
+    height: 60px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  main .colton {
+    grid-area: colton;
+    width: 100%;
     height: 100%;
-    text-align: center !important;
+    padding-bottom: 40px;
   }
-  .ratingsone, .ratingstwo, .ratingsthree {
-    width: 100% !important;
-    margin-right: 0 !important;
+  main .irene {
+    grid-area: irene;
+    width: 100%;
+    padding-bottom: 40px;
   }
-  span {
-    display: block !important;
+  main .Anne {
+    grid-area: anne;
+    width: 100%;
+    padding-bottom: 40px;
   }
-  .bottombox {
-    flex-direction: column !important;
-  }
-  .ratings {
-    margin-top: 50px;
+}
+
+@media only screen and (min-width: 1150px) {
+  html, body {
+    font-size: 19px;
   }
 }
 /*# sourceMappingURL=style.css.map */

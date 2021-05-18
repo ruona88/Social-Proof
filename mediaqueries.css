@@ -1,1 +1,30 @@
-/* No CSS *//*# sourceMappingURL=mediaqueries.css.map */
+@media screen and (max-width: 1000px) {
+  .topbox {
+    width: 90% !important;
+    flex-direction: column;
+    margin: auto;
+  }
+  .comments {
+    width: 100% !important;
+    text-align: center;
+  }
+  .ratings {
+    width: 100% !important;
+    height: 100%;
+    text-align: center !important;
+  }
+  .ratingsone, .ratingstwo, .ratingsthree {
+    width: 100% !important;
+    margin-right: 0 !important;
+  }
+  span {
+    display: block !important;
+  }
+  .bottombox {
+    flex-direction: column !important;
+  }
+  .ratings {
+    margin-top: 50px;
+  }
+}
+/*# sourceMappingURL=mediaqueries.css.map */
